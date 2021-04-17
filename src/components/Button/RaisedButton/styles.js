@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Wrapper = styled.button`
   width: 21.75rem;
@@ -25,4 +25,4 @@ export const Wrapper = styled.button`
     opacity: 0.4;
     pointer-events: none;
   }
-`;
+`

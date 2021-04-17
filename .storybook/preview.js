@@ -1,24 +1,24 @@
-import { ColorsStyle } from "../src/styles/colors";
-import { GlobalStyle } from "../src/styles/global-style";
+import { ColorsStyle } from '../src/styles/colors'
+import { GlobalStyle } from '../src/styles/global-style'
 
 export const parameters = {
   backgrounds: {
-    default: "ioasys",
+    default: 'ioasys',
     values: [
       {
-        name: "ioasys",
-        value: "#eeecdb",
+        name: 'ioasys',
+        value: '#eeecdb',
       },
     ],
   },
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,
     },
   },
-};
+}
 
 const withThemeProvider = (Story, context) => {
   return (
@@ -27,6 +27,6 @@ const withThemeProvider = (Story, context) => {
       <GlobalStyle />
       <Story {...context} />
     </>
-  );
-};
-export const decorators = [withThemeProvider];
+  )
+}
+export const decorators = [withThemeProvider]

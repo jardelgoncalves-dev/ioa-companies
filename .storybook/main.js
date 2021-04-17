@@ -1,10 +1,10 @@
-const path = require("path");
+const path = require('path')
 module.exports = {
-  stories: ["../src/**/*.stories.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
+  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    path.resolve("./my-addon/register.js"),
-    "@storybook/preset-create-react-app",
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    path.resolve('./my-addon/register.js'),
+    '@storybook/preset-create-react-app',
   ],
-};
+}

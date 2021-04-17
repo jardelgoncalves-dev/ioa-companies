@@ -1,15 +1,15 @@
-import React from "react";
-import { RaisedButton as RaisedButtonComponent } from "../components/Button/RaisedButton";
+import React from 'react'
+import { RaisedButton as RaisedButtonComponent } from '../components/Button/RaisedButton'
 
 export default {
-  title: "UI/Button",
+  title: 'UI/Button',
   component: RaisedButtonComponent,
-};
+}
 
-const Template = (args) => <RaisedButtonComponent {...args} />;
+const Template = (args) => <RaisedButtonComponent {...args} />
 
-export const RaisedButton = Template.bind({});
+export const RaisedButton = Template.bind({})
 RaisedButton.args = {
-  text: "Button",
+  text: 'Button',
   disabled: false,
-};
+}
