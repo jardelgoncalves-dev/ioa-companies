@@ -8,5 +8,8 @@ export const ColorsStyle = createGlobalStyle`
     --neon-red: #ff0f44;
     --grey: #748383;
     --beige: #eeecdb;
+    --medium-pink: #ee4c77;
+    --night-blue: #0d0430;
+    --rouge: #991237;
   }
 `
