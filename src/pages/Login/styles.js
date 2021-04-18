@@ -9,7 +9,7 @@ export const Wrapper = styled.div.attrs({
   align-items: center;
 
   .login-page__content {
-    margin: 50px 0;
+    margin: 50px 16px;
 
     max-width: 700px;
     width: 100%;
