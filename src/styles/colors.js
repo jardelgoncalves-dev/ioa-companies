@@ -7,6 +7,6 @@ export const ColorsStyle = createGlobalStyle`
     --charcoal-grey: #383743;
     --neon-red: #ff0f44;
     --grey: #748383;
-
+    --beige: #eeecdb;
   }
 `
