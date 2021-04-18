@@ -9,6 +9,10 @@ export const parameters = {
         name: 'ioasys',
         value: '#eeecdb',
       },
+      {
+        name: 'ioasys-pink',
+        value: '#ee4c77',
+      },
     ],
   },
   actions: { argTypesRegex: '^on[A-Z].*' },
