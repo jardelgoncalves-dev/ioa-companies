@@ -4,7 +4,9 @@ import { Icon } from '../Icon';
 import { Wrapper } from './styles'
 
 function Input({
+  name,
   value,
+  type,
   onChange,
   placeholder,
   iconLeft,
@@ -21,7 +23,9 @@ function Input({
         </div>
       )}
       <input
-      className="ioa-input__elem"
+        name={name}
+        type={type}
+        className="ioa-input__elem"
         value={value}
         placeholder={placeholder}
         onChange={onChange}
@@ -45,7 +49,9 @@ function Input({
 }
 
 Input.propTypes = {
+  name: PropTypes.string,
   value: PropTypes.string,
+  type: PropTypes.string,
   onChange: PropTypes.func,
   placeholder: PropTypes.string,
   iconLeft: PropTypes.string,
@@ -55,6 +61,10 @@ Input.propTypes = {
     onClick: PropTypes.func
   }),
   withError: PropTypes.bool
+}
+
+Input.defaultProps = {
+  type: 'text',
 }
 
 export { Input }
