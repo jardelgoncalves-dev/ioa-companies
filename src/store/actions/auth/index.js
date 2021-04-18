@@ -5,18 +5,23 @@ import {
 } from './dispatches'
 import api from '../../../services/api'
 
-export function authenticate(data) {
+import { removeCredentials, setCredentials } from '../../../services/auth'
+
+export function authenticate(data, history) {
   return async (dispatch) => {
     try {
-      dispatch(authCallbackRequest())
+      await dispatch(authCallbackRequest())
       const response = await api.post('/users/auth/sign_in', data)
-      dispatch(authCallbackSucess(response.headers))
+      await setCredentials(response.headers)
+      await dispatch(authCallbackSucess(response.headers))
+      history.push('/dashboard')
     } catch (error) {
       if (error.response && error.response.data && error.response.data.errors) {
-        dispatch(authCallbackError(error.response.data.errors[0]))
-        return
+        await dispatch(authCallbackError(error.response.data.errors[0]))
+      } else {
+        await dispatch(authCallbackError('Error interno do servidor'))
       }
-      dispatch(authCallbackError('Error interno do servidor'))
+      removeCredentials()
     }
   }
 }
