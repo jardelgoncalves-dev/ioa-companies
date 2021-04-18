@@ -4,7 +4,6 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    path.resolve('./my-addon/register.js'),
     '@storybook/preset-create-react-app',
   ],
 }
