@@ -15,8 +15,4 @@ RaisedButton.propTypes = {
   disabled: PropTypes.bool
 }
 
-RaisedButton.defaultProps = {
-  disabled: false
-}
-
 export {RaisedButton}

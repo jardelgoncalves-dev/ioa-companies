@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.button`
+export const Wrapper = styled.button.attrs({
+  className: 'ioa-raised-button',
+})`
   width: 21.75rem;
   height: 3.563rem;
   background-color: var(--greeny-blue);
@@ -22,7 +24,8 @@ export const Wrapper = styled.button`
   }
 
   &:disabled {
-    opacity: 0.4;
+    background-color: var(--grey);
+    opacity: 0.56;
     pointer-events: none;
   }
 `
