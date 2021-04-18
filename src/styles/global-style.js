@@ -14,4 +14,12 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
   }
+
+  body {
+    background-color: var(--beige);
+  }
+
+  html, body, #root, .app {
+    height: 100%;
+  }
 `
