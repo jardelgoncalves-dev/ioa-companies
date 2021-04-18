@@ -1,17 +1,25 @@
-/* eslint-disable */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { isAuthenticated } from '../../services/auth'
+import history from '../../store/history'
 
 export const withLogic = (Component) => (props) => {
+  const { authenticate } = props
+
   const [form, setForm] = useState({
     email: '',
     password: '',
   })
   const [passwordVisible, setPasswordVisible] = useState(false)
 
-  const showPassword = () => setPasswordVisible(!passwordVisible)
+  useEffect(() => {
+    if (isAuthenticated()) {
+      history.push('/dashboard')
+    }
+  }, [])
 
-  const onSubmit = (data, authenticate) => {
-    authenticate(data)
+  const showPassword = () => setPasswordVisible(!passwordVisible)
+  const onSubmit = async (data) => {
+    authenticate(data, history)
   }
 
   const onInputChange = (event) => {
