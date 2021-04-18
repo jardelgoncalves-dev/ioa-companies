@@ -18,7 +18,6 @@ function Login({
   showPassword,
   onInputChange,
   onSubmit,
-  authenticate,
   authState,
 }) {
   return (
@@ -62,7 +61,7 @@ function Login({
             )}
             <RaisedButton
               text="Entrar"
-              onPress={() => onSubmit(form, authenticate)}
+              onPress={() => onSubmit(form)}
               disabled={!!(!form || !form.email || !form.password)}
             />
           </div>
@@ -72,7 +71,6 @@ function Login({
 }
 
 Login.propTypes = {
-  authenticate: PropTypes.func,
   onInputChange: PropTypes.func,
   onSubmit: PropTypes.func,
   showPassword: PropTypes.func,
@@ -94,4 +92,4 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) =>
   bindActionCreators({ ...AuthAction, }, dispatch);
 
-export default withLogic(connect(mapStateToProps, mapDispatchToProps)(Login));
+export default connect(mapStateToProps, mapDispatchToProps)(withLogic(Login));
