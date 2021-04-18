@@ -1,5 +1,5 @@
 import React from 'react'
-import { RaisedButton as RaisedButtonComponent } from '../components/Button/RaisedButton'
+import { RaisedButton as RaisedButtonComponent } from '../components/Button'
 
 export default {
   title: 'UI/Button',
