@@ -10,7 +10,7 @@ export const Wrapper = styled.div.attrs({
   className: 'ioa-input',
 })`
   ${common};
-  max-width: 24.75rem;
+  max-width: 20.75rem;
   width: 100%;
   height: 3rem;
   border-bottom: 1px solid
@@ -24,16 +24,19 @@ export const Wrapper = styled.div.attrs({
     color: var(--charcoal-grey);
     background-color: transparent;
     border: none;
-    padding: 0 1rem;
+    padding: 0 0.75rem;
     font-size: 1.2rem;
   }
 
-  &__with-error,
-  &__icon {
+  .ioa-input__with-error,
+  .ioa-input__icon {
     ${common};
     justify-content: center;
     height: auto;
     width: 27px;
+    svg {
+      width: 22px;
+    }
   }
 
   button {
