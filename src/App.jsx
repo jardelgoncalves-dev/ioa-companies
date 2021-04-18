@@ -1,9 +1,9 @@
 import { Provider } from 'react-redux';
-import Login from './pages/Login'
 import { ColorsStyle } from './styles/colors'
 import { GlobalStyle } from './styles/global-style'
 
 import { store } from './store'
+import { Router } from './routes';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <div className="app">
         <ColorsStyle />
         <GlobalStyle />
-        <Login />
+        <Router />
       </div>
     </Provider>
   )
