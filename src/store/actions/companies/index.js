@@ -7,6 +7,7 @@ import {
 import api from '../../../services/api'
 
 import { removeCredentials } from '../../../services/auth'
+import history from '../../history'
 
 const debounceFn = _.debounce(
   (dispatch, query) =>
@@ -23,6 +24,7 @@ const debounceFn = _.debounce(
         if (error.response && error.response.status === 401) {
           removeCredentials()
           await dispatch(companiesCallbackError(error.response.data.errors[0]))
+          history.push('/')
         } else {
           await dispatch(companiesCallbackError('Error interno do servidor'))
         }
