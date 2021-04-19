@@ -4,7 +4,7 @@ import { Wrapper } from './styles'
 import LogoWhiteImg from '../../assets/logo-white.png'
 import { SearchBar } from '../SearchBar'
 
-function Header({ onSearch, valueSearch }) {
+function Header({ onSearch, valueSearch, onSearchClose }) {
   const [expanded, setExpanded] = useState(false)
   return (
     <Wrapper>
@@ -16,7 +16,10 @@ function Header({ onSearch, valueSearch }) {
           value={valueSearch}
           onChange={onSearch}
           onExpand={() => setExpanded(true)}
-          onClose={() => setExpanded(false)}
+          onClose={() => {
+            setExpanded(false);
+            onSearchClose()
+          }}
         />
       </div>
     </Wrapper>
