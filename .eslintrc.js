@@ -21,5 +21,6 @@ module.exports = {
     'react/require-default-props': 'off',
     'react/forbid-prop-types': 'off',
     'react/prop-types': 'off',
+    'no-unused-expressions': 'off',
   },
 }
