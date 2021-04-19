@@ -7,6 +7,7 @@ import { ReactComponent as ReactEyeOff } from './_icons/ic-eye-off.svg'
 import { ReactComponent as ReactAlert } from './_icons/ic-alert.svg'
 import { ReactComponent as ReactSearch } from './_icons/ic-search.svg'
 import { ReactComponent as ReactClose } from './_icons/ic-close.svg'
+import { ReactComponent as ReactArrowLeft } from './_icons/ic-arrow-left.svg'
 
 const icons = {
   padlock: <ReactPadlock />,
@@ -15,7 +16,8 @@ const icons = {
   'eye-off': <ReactEyeOff />,
   alert: <ReactAlert />,
   search: <ReactSearch />,
-  close: <ReactClose />
+  close: <ReactClose />,
+  'arrow-left': <ReactArrowLeft />
 }
 
 function Icon({ name }) {
