@@ -8,7 +8,16 @@ export default {
     name: {
       control: {
         type: 'radio',
-        options: ['padlock', 'email', 'eye', 'eye-off', 'alert'],
+        options: [
+          'padlock',
+          'email',
+          'eye',
+          'eye-off',
+          'alert',
+          'search',
+          'arrow-left',
+          'close',
+        ],
       },
     },
   },
