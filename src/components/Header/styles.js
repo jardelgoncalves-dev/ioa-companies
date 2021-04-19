@@ -41,4 +41,26 @@ export const Wrapper = styled.div`
       }
     }
   }
+  .ioa-header__content.--go-back {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 40px;
+
+    button.go-back-btn {
+      background-color: transparent;
+      border: none;
+      height: 3rem;
+      cursor: pointer;
+      margin-right: 2rem;
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .title-header {
+      font-weight: normal;
+      color: var(--white);
+    }
+  }
 `
