@@ -9,4 +9,8 @@ export default {
 const Template = (args) => <HeaderComponent {...args} />
 
 export const Header = Template.bind({})
-Header.args = {}
+Header.args = {
+  valueSearch: '',
+  isGoback: false,
+  textGoBack: 'Empresa 1',
+}
