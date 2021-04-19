@@ -20,7 +20,7 @@ const debounceFn = _.debounce(
         const { data } = await api.get(`/enterprises?name=${query}`)
         await dispatch(companiesCallbackSucess(data.enterprises))
       } catch (error) {
-        if (error.response && error.response.status === 409) {
+        if (error.response && error.response.status === 401) {
           removeCredentials()
           await dispatch(companiesCallbackError(error.response.data.errors[0]))
         } else {
