@@ -3,6 +3,7 @@ import { ConnectedRouter } from 'connected-react-router'
 
 import Login from '../pages/Login'
 import Dashboard from '../pages/Dashboard'
+import Company from '../pages/Company'
 import PageError from '../pages/Error'
 
 import PrivateRoute from './PrivateRouter'
@@ -17,6 +18,11 @@ export const Router = () => (
           exact
           component={Dashboard}
           path="/dashboard"
+        />
+        <PrivateRoute
+          exact
+          component={Company}
+          path="/dashboard/company/:id"
         />
         <Route component={PageError} path="*" />
       </Switch>
