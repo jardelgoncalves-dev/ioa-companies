@@ -1,6 +1,6 @@
 import { ColorsStyle } from '../src/styles/colors'
 import { GlobalStyle } from '../src/styles/global-style'
-
+import { MemoryRouter } from 'react-router-dom'
 export const parameters = {
   backgrounds: {
     default: 'ioasys',
@@ -26,11 +26,11 @@ export const parameters = {
 
 const withThemeProvider = (Story, context) => {
   return (
-    <>
+    <MemoryRouter>
       <ColorsStyle />
       <GlobalStyle />
       <Story {...context} />
-    </>
+    </MemoryRouter>
   )
 }
 export const decorators = [withThemeProvider]
